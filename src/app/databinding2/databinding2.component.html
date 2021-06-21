@@ -1,0 +1,22 @@
+
+<!--
+<div *ngIf="condicao == false">
+<button (click)="change()">ver</button>
+</div>
+<div *ngIf="condicao == true">
+  <button (click)="change()">esconder</button>
+</div>
+-->
+<button (click)="restoreAnimais()">restoreAnimais</button>
+<button (click)="popAnimais()">popAnimais</button>
+<div *ngIf="condicao;else contrario"><button (click)="change()">esconder</button></div>
+
+<ng-template #contrario><button (click)="change()">ver</button></ng-template>
+
+<div *ngIf="condicao">
+  <div *ngFor="let bicho of animais">{{bicho}}</div>
+</div>
+
+
+
+
